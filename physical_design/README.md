@@ -15,15 +15,16 @@ __Initialising the design__
 
 __Placement and Routing__
 We use GUI after this to do
-• Floor plan
-• Pin editor
-• Power plan
-• Connect global nets
-• Add end cap
-• Special route
-• Placement
-• Pre CTS
-• CTS
-• Post CTS
-• Route
-• Post route
+- Floor plan
+- Pin editor
+- Power plan
+- Connect global nets
+- Add end cap
+- Special route
+- Placement
+- Pre CTS
+- CTS
+- Post CTS
+- Route
+- Post Route
+
