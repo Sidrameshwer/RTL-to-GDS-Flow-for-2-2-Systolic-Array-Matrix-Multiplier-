@@ -1,6 +1,6 @@
 - The tool used for synthesis (converting RTL to a gate-level netlist) is Synopsys DC.
 - TCL script is run, that generates the netlist file(.dc.v) and a SDC file(Synopsys Design Constraint).
-- The generated netlist is simulated using Symopsys VCS.
+- The generated netlist is simulated using Synopsys VCS.
 
 
 __Below is the simulation result of the generated netlist__
