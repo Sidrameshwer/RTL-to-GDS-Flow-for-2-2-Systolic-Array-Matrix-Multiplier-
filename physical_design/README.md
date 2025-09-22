@@ -35,9 +35,11 @@ __Before Placement__
 
 __After Placemnet__
 <img width="1918" height="989" alt="image" src="https://github.com/user-attachments/assets/b4c9f536-e23f-42d8-a623-7fcf95c86f82" />
+
 - After placement, go to Timing->Report Timing and select Design stage like pre-CTS, post -CTS, post -Route than slect hold or setup.
 
 <img width="883" height="650" alt="image" src="https://github.com/user-attachments/assets/6f7dcc15-7626-41db-bc55-a332e3e4d54f" />
+
 - Check whether you have any setup or hold vilations. If yes, than you can see the volated path in Timing-> Debug Timing. After knowing the path you can add buffer manullay from 'ECO' window.
 - Other option is go to EC0->Optimize and select Design stage and Optimization type like setup, hold, DRV.
 - Generally, we resolve setup violations(if there are any) in this stage. Hold violations are taken care after the CTS stage as hold slack becomes worst once CTS is done.
@@ -57,8 +59,19 @@ __After Placemnet__
 
 <img width="1917" height="959" alt="image" src="https://github.com/user-attachments/assets/cd39bc76-b51a-4bc5-a938-f1efb0f60673" />
 
-- Check the timing again this time, with Design stage as post -Route. 
+- Check the timing again this time, with Design stage as post -Route.
+- Verify DRC and connectivity.
+- If, DRC, connectivity everything is fine with 0 violations, __Layout is done__.
+- Save layout work.
 
+For the final layout outputs, execute the following instructions sequentially.
+
+- streamOut alu_layout.gds
+- saveNetlist alu_postlayoutnetlist.v
+- extractRC
+- rcOut -spef alu_postlayoutspeffile.spef
+- write_sdf -recompute_parallel_arcs alu_postlayoutsdffile.sdf
+- defOut alu_postlayoutdeffile.def
 
 
 
