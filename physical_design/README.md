@@ -28,3 +28,39 @@ We use GUI after this to do
 - Route
 - Post Route
 
+__Before Placement__
+<img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/185a6d66-0b60-422d-ad38-cc3c926218cc" />
+- After doing the steps before placemnt like floorplan,pin editor,power plan etc, the deisgn looks something like this.
+- Save the design upto here so that you can source it later and continue the steps.
+
+__After Placemnet__
+<img width="1918" height="989" alt="image" src="https://github.com/user-attachments/assets/b4c9f536-e23f-42d8-a623-7fcf95c86f82" />
+- After placement, go to Timing->Report Timing and select Design stage like pre-CTS, post -CTS, post -Route than slect hold or setup.
+
+<img width="883" height="650" alt="image" src="https://github.com/user-attachments/assets/6f7dcc15-7626-41db-bc55-a332e3e4d54f" />
+- Check whether you have any setup or hold vilations. If yes, than you can see the volated path in Timing-> Debug Timing. After knowing the path you can add buffer manullay from 'ECO' window.
+- Other option is go to EC0->Optimize and select Design stage and Optimization type like setup, hold, DRV.
+- Generally, we resolve setup violations(if there are any) in this stage. Hold violations are taken care after the CTS stage as hold slack becomes worst once CTS is done.
+
+* Now, source the ccopt_spec_file.tcl and enter " ccopt_design -cts" command in innovus window.
+* Your clock tree has been built
+* You can go to Clock->CCopt Clock Tree Debugger to see whether the clock tree has been bulit or not.
+  <img width="1851" height="906" alt="image" src="https://github.com/user-attachments/assets/5ef938db-d91a-4d26-8297-9e12da510f79" />
+
+- Check the timings, this time chossing post -CTS as design stage.
+<img width="1071" height="684" alt="image" src="https://github.com/user-attachments/assets/eb90f3d3-41af-4330-837e-259b5842fa4a" />
+
+  
+- After this, do the Routing
+- Go to Route-> NanoRoute-> Route 
+<img width="730" height="803" alt="image" src="https://github.com/user-attachments/assets/964b3d44-7ce0-4b92-8c47-eff059597254" />
+
+<img width="1917" height="959" alt="image" src="https://github.com/user-attachments/assets/cd39bc76-b51a-4bc5-a938-f1efb0f60673" />
+
+- Check the timing again this time, with Design stage as post -Route. 
+
+
+
+
+
+
