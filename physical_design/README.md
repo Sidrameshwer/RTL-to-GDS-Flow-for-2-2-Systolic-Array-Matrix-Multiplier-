@@ -30,17 +30,17 @@ We use GUI after this to do
 
 __Before Placement__
 <img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/185a6d66-0b60-422d-ad38-cc3c926218cc" />
-- After doing the steps before placemnt like floorplan,pin editor,power plan etc, the deisgn looks something like this.
+- After doing the steps before placement like floorplan,pin editor,power plan etc, the deisgn looks something like this.
 - Save the design upto here so that you can source it later and continue the steps.
 
 __After Placement__
 <img width="1918" height="989" alt="image" src="https://github.com/user-attachments/assets/b4c9f536-e23f-42d8-a623-7fcf95c86f82" />
 
-- After placement, go to Timing->Report Timing and select Design stage like pre-CTS, post -CTS, post -Route than slect hold or setup.
+- After placement, go to Timing->Report Timing and select Design stage like pre-CTS, post -CTS, post -Route then select hold or setup.
 
 <img width="883" height="650" alt="image" src="https://github.com/user-attachments/assets/6f7dcc15-7626-41db-bc55-a332e3e4d54f" />
 
-- Check whether you have any setup or hold vilations. If yes, than you can see the volated path in Timing-> Debug Timing. After knowing the path you can add buffer manullay from 'ECO' window.
+- Check whether you have any setup or hold violations. If yes, than you can see the violated path in Timing-> Debug Timing. After knowing the path you can add buffer manuallay from 'ECO' window.
 - Other option is go to EC0->Optimize and select Design stage and Optimization type like setup, hold, DRV.
 - Generally, we resolve setup violations(if there are any) in this stage. Hold violations are taken care after the CTS stage as hold slack becomes worst once CTS is done.
 
