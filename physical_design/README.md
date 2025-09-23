@@ -33,7 +33,7 @@ __Before Placement__
 - After doing the steps before placemnt like floorplan,pin editor,power plan etc, the deisgn looks something like this.
 - Save the design upto here so that you can source it later and continue the steps.
 
-__After Placemnet__
+__After Placement__
 <img width="1918" height="989" alt="image" src="https://github.com/user-attachments/assets/b4c9f536-e23f-42d8-a623-7fcf95c86f82" />
 
 - After placement, go to Timing->Report Timing and select Design stage like pre-CTS, post -CTS, post -Route than slect hold or setup.
@@ -49,7 +49,7 @@ __After Placemnet__
 * You can go to Clock->CCopt Clock Tree Debugger to see whether the clock tree has been bulit or not.
   <img width="1851" height="906" alt="image" src="https://github.com/user-attachments/assets/5ef938db-d91a-4d26-8297-9e12da510f79" />
 
-- Check the timings, this time chossing post -CTS as design stage.
+- Check the timings, this time choosing post -CTS as design stage.
 <img width="1071" height="684" alt="image" src="https://github.com/user-attachments/assets/eb90f3d3-41af-4330-837e-259b5842fa4a" />
 
   
@@ -66,12 +66,12 @@ __After Placemnet__
 
 For the final layout outputs, execute the following instructions sequentially.
 
-- streamOut alu_layout.gds
-- saveNetlist alu_postlayoutnetlist.v
+- streamOut systolic2x2_layout.gds
+- saveNetlist systolic2x2_postlayoutnetlist.v
 - extractRC
-- rcOut -spef alu_postlayoutspeffile.spef
-- write_sdf -recompute_parallel_arcs alu_postlayoutsdffile.sdf
-- defOut alu_postlayoutdeffile.def
+- rcOut -spef systolic2x2_postlayoutspeffile.spef
+- write_sdf -recompute_parallel_arcs systolic2x2_postlayoutsdffile.sdf
+- defOut systolic2x2_postlayoutdeffile.def
 
 
 
